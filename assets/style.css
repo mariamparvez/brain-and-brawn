@@ -1,4 +1,4 @@
-body {
+ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
@@ -6,20 +6,16 @@ body {
     outline: 0;
 }
 
+/* navbar */
+
 nav {
     width: 100%;
     position: fixed;
-    top: 0%;
-    background-color: aqua;
-}
-
-ul {
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    text-decoration: none;
-    float: right;
+    justify-content: space-around;
+    top: 0%;
+    background-color: aqua;
 }
 
 .img-nav {
@@ -30,6 +26,20 @@ ul {
     margin: 1rem;
 }
 
+li {
+    list-style: none;
+    display: inline-block;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+#hamburger {
+    display: none;
+}
+
+/* navbar end */
+
 main, footer {
     text-align: center;
 }
@@ -38,26 +48,11 @@ main {
     margin: 10rem 5rem;
 }
 
-span, em {
-    color: rgb(13, 75, 117);
-}
-
 img {
     width: 70%;
     height: auto;
     margin-top: 2rem;
     border-radius: 10%;
-}
-
-header {
-    text-align: start;
-    margin: 2rem;
-}
-
-li {
-    list-style: none;
-    cursor: pointer;
-    padding: 1rem;
 }
 
 .course-text {
@@ -99,6 +94,11 @@ button {
 
 /*teachers*/
 
+header {
+    text-align: start;
+    margin: 2rem;
+}
+
 section {
     width: 20%;
     height: auto;
@@ -124,8 +124,38 @@ input {
 }
 
 @media only screen and (max-width: 1000px){
+    body{
+        overflow-x: hidden;
+    }
+    
+    #nav-links {
+      background-color: rgb(255, 250, 245);
+      position: absolute;
+      width: 100vw;
+      height: auto;
+      top: 5rem;
+      display: none;
+    }
+    
+    #hamburger {
+        display: block;
+    }
+    
+    li {
+        flex-direction: row;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 1rem; 
+    }
+
     section {
        width: 40%;
+       height: auto;
+   }
+
+   .img-nav {
+       width: 10%;
        height: auto;
    }
 }

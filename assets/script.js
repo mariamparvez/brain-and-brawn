@@ -1,4 +1,7 @@
 var tutorList = document.getElementById('tutor-list');
+var hamburger = document.getElementById("hamburger");
+
+hamburger.addEventListener("click", Links)
 
 function myTutor() {
     fetch(`https://randomuser.me/api/?results=10`)
@@ -23,5 +26,15 @@ function myTutor() {
     })
 }
 
+function Links() {
+    let links = document.getElementById("nav-links")
+    if( links.style.display === "block") {
+        links.style.display = "none";
+    } else {
+        links.style.display = "block"
+    }
+   
+    console.log('clicked')
+}
 myTutor()
 
